@@ -1,0 +1,162 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Stick+No+Bills:wght@600&display=swap"); */
+@import url('https://fonts.googleapis.com/css2?family=Keania+One&display=swap');
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+body {
+  background-image: url(background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+header {
+  margin: 2%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  color: white;
+  font-size: 3em;
+  font-family: "Alex Brush", cursive;
+}
+.logo .parekh {
+  line-height: 28px;
+  padding-left: 1.6em;
+}
+ul li {
+  display: inline;
+}
+a {
+  text-decoration: none;
+  font-size: 1.3em;
+  color: white;
+  margin: 10px;
+  border: 3px solid #b02120;
+  padding: 15px;
+  border-radius: 6px;
+  background-color: transparent;
+  font-family: "Manrope", sans-serif;
+}
+a:hover,
+button:hover,
+i:hover {
+  transition: all 400ms ease-in-out;
+  background-color: #b02120;
+}
+button {
+  background-color: transparent;
+  font-size: 1.3em;
+  color: white;
+  margin: 10px;
+  border: 3px solid #b02120;
+  padding: 10px;
+  border-radius: 6px;
+  outline: none;
+  font-family: "Manrope", sans-serif;
+}
+button .icon {
+  padding: 20px;
+}
+.sectionOne {
+  margin: 2%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+i {
+  color: white;
+  margin-block: 12px;
+  border: 3px solid #b02120;
+  padding: 12px;
+  border-radius: 16px;
+  font-size: 1.4em;
+}
+.sectionOne h1 {
+  font-size: 3.5em;
+  color: white;
+  font-family: 'Keania One', cursive;
+}
+.sectionOne h1 span {
+  color: #b02120;
+}
+.btn-container {
+  display: flex;
+  align-items: stretch;
+}
+.btn {
+  flex: 1;
+  padding: 8px;
+  text-transform: uppercase;
+  box-shadow: -1px 7px 12px -6px rgba(176, 33, 32, 1);
+}
+.down {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.down a {
+  border: none;
+}
+.down a:hover {
+  background-color: transparent;
+}
+.down i {
+  margin: 0;
+  border-radius: 26px;
+}
+.sectionTwo {
+  margin: 4% 6%;
+}
+.sectionTwo h1 {
+  font-size: 3.5em;
+  color: white;
+  font-family: 'Keania One', cursive;
+  text-align: center;
+}
+.hrLines {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hrLines div {
+  width: 4%;
+}
+.hrLines span {
+  color: #b02120;
+  font-size: 2em;
+  font-weight: 600;
+  font-family: "Manrope", sans-serif;
+}
+.sectionTwo-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-block: 2%;
+}
+.sectionTwo-flex div {
+  width: 100%;
+}
+.sectionTwo-flex img {
+  border-radius: 10px;
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+.sectionTwo-flex h1 {
+  text-align: start;
+}
+.sectionTwo-flex span {
+  color: #b02120;
+}
+.sectionTwo-flex p {
+  color: white;
+  font-size: 1.5em;
+  font-weight: 400;
+  margin-block: 1em;
+  font-family: "Manrope", sans-serif;
+}
