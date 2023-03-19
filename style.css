@@ -299,7 +299,7 @@ a{
   padding: 10px;
 }
 .sectionTwo {
-  margin: 3% 6%;
+  margin: 3% 10%;
 }
 .sectionTwo h1 {
   font-size: 3em;
@@ -313,7 +313,7 @@ a{
   align-items: center;
 }
 .hrLines div {
-  width: 4%;
+  width: 3%;
 }
 .hrLines span {
   color: #b02120;
