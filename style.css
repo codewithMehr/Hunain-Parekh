@@ -155,6 +155,10 @@ header {
   padding-left: 1.6em;
 }
 
+.menu{
+  display: none;
+}
+
 .navbar ul {
   display: flex;
   justify-content: space-around;
@@ -350,4 +354,68 @@ a{
   text-align: justify;
   margin-block: 1em;
   font-family: "Manrope", sans-serif;
+}
+
+@media only screen and (max-width: 600px) {
+
+  .mobile-view{
+    width: 100%;
+    display: flex;
+    padding: 10px;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo{
+    display: flex;
+    align-items: center;
+  }
+
+  .logo .parekh{
+    line-height: 100%;
+    padding-left: 0;
+    margin-left: 10px;
+  }
+
+  .menu{
+    display: block;
+  }
+
+  .menu i{
+    font-size: 30px;
+    color: white;
+  }
+
+  header{
+    margin: 0;
+    flex-direction: column;
+  }
+
+  .sectionOne{
+    margin:30px 2%;
+    flex-direction: column;
+  }
+
+  .main-pic img{
+    width: 100%;
+    height: auto;
+  }
+
+  .navbar{
+    display: none;
+  }
+
+  .heading{
+    font-size: 30px;
+  }
+
+  .sectionOne ul{
+    width: 100%;
+    justify-content: space-around;
+    display: flex;
+  }
+
+  .sectionTwo{
+    display: none;
+  }
 }
