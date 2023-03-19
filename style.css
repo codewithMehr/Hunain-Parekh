@@ -358,6 +358,12 @@ a{
 
 @media only screen and (max-width: 600px) {
 
+  body{
+    background-position: center;
+    background-repeat: repeat-y;
+    background-size: contain;
+  }
+
   .mobile-view{
     width: 100%;
     display: flex;
@@ -406,7 +412,7 @@ a{
   }
 
   .heading{
-    font-size: 30px;
+    font-size: 30px !important;
   }
 
   .sectionOne ul{
@@ -416,6 +422,21 @@ a{
   }
 
   .sectionTwo{
-    display: none;
+    margin: 10% 5%;
+  }
+
+  .sectionTwo-flex{
+    flex-direction: column;
+    margin-block: 10%;
+  }
+
+  .about_heading{
+    font-size: 27px !important;
+    margin-top:10%;
+    width: 100%;
+  }
+
+  .sectionTwo-flex p{
+    font-size: 17px;
   }
 }
