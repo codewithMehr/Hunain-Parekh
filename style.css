@@ -2,19 +2,135 @@
 @import url("https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap");
 /* @import url("https://fonts.googleapis.com/css2?family=Stick+No+Bills:wght@600&display=swap"); */
 @import url('https://fonts.googleapis.com/css2?family=Keania+One&display=swap');
+
+:root {
+  --glow-color: #b02120;
+}
+
+.glowing-btn {
+  cursor: pointer;
+  border: 3px solid var(--glow-color);
+  border-radius: 20px;
+  background: transparent;
+  perspective: 2em;
+  font-size: 24px;
+  color: white;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -webkit-box-shadow: inset 0px 0px 0.1em 0px var(--glow-color),
+    0px 0px 0.5em 0px var(--glow-color);
+  -moz-box-shadow: inset 0px 0px 0.1em 0px var(--glow-color),
+    0px 0px 0.1em 0px var(--glow-color);
+  box-shadow: inset 0px 0px 0.1em 0px var(--glow-color),
+    0px 0px 0.5em 0px var(--glow-color);
+  animation: border-flicker 2s linear infinite;
+  margin: 10px;
+}
+
+.faulty-letter {
+  opacity: 0.5;
+  animation: faulty-flicker 2s linear infinite;
+}
+
+.glowing-btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  z-index: -1;
+  background-color: var(--glow-color);
+  box-shadow: 0 0 2em 0.2em var(--glow-color);
+  transition: opacity 100ms linear;
+  border-radius: 18px;
+}
+
+.glowing-btn:hover {
+  animation: none;
+}
+
+.glowing-btn:hover .faulty-letter {
+  animation: none;
+  opacity: 1;
+}
+
+.glowing-btn:hover:after {
+  opacity: 1;
+}
+
+@keyframes faulty-flicker {
+  0% {
+    opacity: 0.1;
+  }
+  2% {
+    opacity: 0.1;
+  }
+  4% {
+    opacity: 0.5;
+  }
+  19% {
+    opacity: 0.5;
+  }
+  21% {
+    opacity: 0.1;
+  }
+  23% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 0.5;
+  }
+  83% {
+    opacity: 0.4;
+  }
+
+  87% {
+    opacity: 1;
+  }
+}
+
+@keyframes border-flicker {
+  0% {
+    opacity: 0.1;
+  }
+  2% {
+    opacity: 1;
+  }
+  4% {
+    opacity: 0.1;
+  }
+
+  8% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
   scroll-behavior: smooth;
 }
+
 body {
   background-image: url(background.jpg);
   background-repeat: no-repeat;
   background-size: cover;
 }
 body::-webkit-scrollbar {
-  width: 15px;
+  width: 10px;
 }
 body::-webkit-scrollbar-track {
   background-color: #f1f1f1;
@@ -31,78 +147,120 @@ header {
 }
 .logo {
   color: white;
-  font-size: 3em;
+  font-size: 36px;
   font-family: "Alex Brush", cursive;
 }
 .logo .parekh {
   line-height: 28px;
   padding-left: 1.6em;
 }
-ul li {
-  display: inline;
+
+.navbar ul {
+  display: flex;
+  justify-content: space-around;
 }
-header a{
+
+.navbar ul li{
+  list-style: none;
+  margin: 5px;
+}
+
+a{
   text-decoration: none;
-  font-size: 1.3em;
-  color: white;
-  margin: 10px;
-  border: 3px solid #b02120;
-  padding: 15px;
-  border-radius: 6px;
-  background-color: transparent;
-  font-family: "Manrope", sans-serif;
 }
-a:hover,
-button:hover,
-i:hover {
-  transition: all 400ms ease-in-out;
+
+.btn:hover{
   background-color: #b02120;
+  box-shadow: 0 0 2em 0.2em var(--glow-color);
+  transition: opacity 100ms linear;
 }
-button {
+
+/* buttons */
+
+.btn {
   background-color: transparent;
-  font-size: 1.3em;
+  font-size: 13px;
   color: white;
-  margin: 10px;
   border: 3px solid #b02120;
-  padding: 10px;
-  border-radius: 6px;
+  border-radius: 7px;
   outline: none;
   font-family: "Manrope", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  text-transform: uppercase;
+  height: 50px;
+  box-shadow: -1px 7px 12px -6px rgba(176, 33, 32, 1);
+  margin: 10px;
+  width: 100%;
 }
-button .icon {
-  padding: 20px;
+
+.nav_btn{
+  width: 120px;
 }
+
+.connect_btn{
+  width: 200px;
+  justify-content: space-around !important;
+}
+
+/* connect btn */
+
+/* connect icon  */
+.connect_btn .icon {
+  height: 50px;
+  display: flex;
+  align-items: center;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .connect_btn .icon {
+      animation: connect-icon-spin infinite 0.5s linear;
+  }
+}
+
+@keyframes connect-icon-spin {
+  from {
+      transform: rotate(0deg);
+  }
+
+  to {
+      transform: rotate(360deg);
+  }
+}
+
+/* connect icon end */
+
 .sectionOne {
-  margin: 2%;
+  margin:0 2%;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-i {
-  color: white;
-  margin-block: 12px;
-  border: 3px solid #b02120;
-  padding: 12px;
-  border-radius: 16px;
-  font-size: 1.4em;
+
+.main-pic img{
+  width: 725px;
+  height: auto;
 }
-.sectionOne h1 {
-  font-size: 3em;
+
+.sectionOne ul li{
+  list-style: none;
+}
+
+.heading {
+  font-size: 48px;
+  font-weight: 300;
   color: white;
   font-family: 'Keania One', cursive;
 }
-.sectionOne h1 span {
+.heading span {
   color: #b02120;
 }
+
 .btn-container {
   display: flex;
-  align-items: stretch;
-}
-.btn {
-  flex: 1;
-  padding: 8px;
-  text-transform: uppercase;
-  box-shadow: -1px 7px 12px -6px rgba(176, 33, 32, 1);
+  align-items: center;
 }
 .down {
   display: flex;
@@ -129,10 +287,17 @@ i {
 }
 .down i {
   margin: 0;
-  border-radius: 26px;
+  border-radius: 100%;
+  width: 50px;
+  height: 50px;
+  border: 3px solid #b02120;
+  color: white;
+  font-size: 24px;
+  text-align: center;
+  padding: 10px;
 }
 .sectionTwo {
-  margin: 4% 6%;
+  margin: 3% 6%;
 }
 .sectionTwo h1 {
   font-size: 3em;
@@ -179,6 +344,7 @@ i {
   color: white;
   font-size: 1.5em;
   font-weight: 400;
+  text-align: justify;
   margin-block: 1em;
   font-family: "Manrope", sans-serif;
 }

@@ -12,60 +12,57 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Hunain Parekh</title>
 </head>
-
 <body>
     <header>
         <div class="logo">
             <p>Hunain</p>
             <p class="parekh">Parekh</p>
         </div>
-        <nav>
+        <nav class="navbar">
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Portfolio</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="#" class="btn nav_btn">Home</a></li>
+                <li><a href="#" class="btn nav_btn">About</a></li>
+                <li><a href="#" class="btn nav_btn">Portfolio</a></li>
+                <li><a href="#" class="btn nav_btn">Contact</a></li>
             </ul>
         </nav>
-        <button>CONNECT ME <span class="icon">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                    <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                        stroke-width="2">
-                        <path d="M3 12a9 9 0 0 0 9 9a9 9 0 0 0 9-9a9 9 0 0 0-9-9" />
-                        <path d="M17 12a5 5 0 1 0-5 5" />
-                    </g>
-                </svg></span>
-        </button>
+        <a href="https://www.linkedin.com/in/hunain-parekh" target="_blank" class="connect_btn btn">CONNECT ME <span class="icon">
+            <img src="spinner.svg" alt="">
+                </span>
+        </a>
     </header>
     <section class="sectionOne">
         <div>
-            <h1>Bringing <span>IDEAS</span> to life <br>with the power of <span>CODE</span></h1>
+            <h1 class="heading">Bringing <span>IDEAS</span> to life <br>with the power of <span>CODE</span></h1>
             <div class="btn-container">
                 <button class="btn">About Me</button>
                 <button class="btn">Download My resume</button>
             </div>
         </div>
-        <div>
+        <div class="main-pic">
             <img src="section1.png" alt="">
         </div>
-        <div>
+        <ul>
             <li>
-                <a target="_blank" href="https://www.facebook.com/hunain.parekh.10
-                "><i class="fa-brands fa-facebook"></i></a>
+                <a target="_blank" class="glowing-btn" href="https://www.facebook.com/hunain.parekh.10"><i class="fa-brands fa-facebook faulty-letter"></i></a>
             </li>
-            <li><a target="_blank" href="https://www.linkedin.com/in/hunain-parekh
-                "><i class="fa-brands fa-linkedin"></i></a></li>
-            <li><a target="_blank" href="https://twitter.com/hani_hunain
-                "><i class="fa-brands fa-twitter"></i></a></li>
-            <li><a target="_blank" href="https://www.instagram.com/hunain.parekh/
-                "><i class="fa-brands fa-instagram"></i></a></li>
-            <li><a target="_blank" href="https://github.com/hunainparekh2211006KHICND"><i
-                        class="fa-brands fa-github"></i></a></li>
-        </div>
+            <li>
+                <a target="_blank" class="glowing-btn" href="https://www.linkedin.com/in/hunain-parekh"><i class="fa-brands fa-linkedin faulty-letter"></i></a>
+            </li>
+            <li>
+                <a target="_blank" class="glowing-btn" href="https://twitter.com/hani_hunain"><i class="fa-brands fa-twitter faulty-letter"></i></a>
+            </li>
+            <li>
+                <a target="_blank" class="glowing-btn" href="https://www.instagram.com/hunain.parekh/"><i class="fa-brands fa-instagram faulty-letter"></i></a>
+            </li>
+            <li>
+                <a target="_blank" class="glowing-btn" href="https://github.com/hunainparekh2211006KHICND"><i class="fa-brands fa-github faulty-letter"></i></a>
+            </li>
+        </ul>
     </section>
     <div class="down"><a href="#sectionTwo-flex"><i class="fa-solid fa-angles-down"></i></a></div>
     <section class="sectionTwo">
-        <h1>ABOUT ME</h1>
+        <h1 class="heading">ABOUT ME</h1>
         <div class="hrLines">
             <div>
                 <hr>
@@ -81,12 +78,9 @@
                 <img src="section2.jpg" alt="">
             </div>
             <div>
-                <h1>My name is Hunain Parekh <br>and I am a <span>Developer</span>
+                <h1 class="heading">My name is Hunain Parekh <br>and I am a <span class="typing"></span>
                 </h1>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequatur in nihil quia quo atque
-                    officiis labore assumenda aperiam quibusdam voluptas modi libero nulla omnis soluta quasi mollitia
-                    nesciunt, illo suscipit porro aliquid facilis quis aspernatur. Corporis quibusdam temporibus ipsum
-                    culpa.</p>
+                <p>As a certified Cloud Native Engineer with 3 years of experience in the IT field, I have gained a deep understanding of the latest technologies and best practices in cloud computing. My expertise in designing, deploying, and managing cloud-based systems has helped organizations streamline their operations and achieve significant cost savings.</p>
                 <div class="btn-container">
                     <button class="btn">Recent Projects</button>
                     <button class="btn">My Skills</button>
@@ -94,6 +88,16 @@
             </div>
         </div>
     </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
+    <script>
+        var typed = new Typed(".typing", {
+        strings: ["Developer","Hacker","Designer","Programer","Coder"],
+        typeSpeed: 100,
+        backSpeed: 60,
+        loop: true
+        
+    });
+    </script>
 </body>
 
 </html>
